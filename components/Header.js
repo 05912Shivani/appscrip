@@ -230,21 +230,21 @@ export default function Header() {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const router = useRouter();
 
-  const handleSearchClick = () => {
-    router.push("/search");
-  };
+  // const handleSearchClick = () => {
+  //   router.push("/search");
+  // };
 
-  const handleWishlistClick = () => {
-    router.push("/wishlist");
-  };
+  // const handleWishlistClick = () => {
+  //   router.push("/wishlist");
+  // };
 
-  const handleCartClick = () => {
-    router.push("/cart");
-  };
+  // const handleCartClick = () => {
+  //   router.push("/cart");
+  // };
 
-  const handleProfileClick = () => {
-    setShowProfileMenu((prev) => !prev);
-  };
+  // const handleProfileClick = () => {
+  //   setShowProfileMenu((prev) => !prev);
+  // };
 
   return (
     <header
