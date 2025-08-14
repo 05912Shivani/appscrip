@@ -69,31 +69,32 @@ export default function Header() {
         <span style={{ cursor: "default" }}>🔍</span>
         <span style={{ cursor: "default" }}>❤️</span>
         <span style={{ cursor: "default" }}>🛍️</span>
+         <span style={{ cursor: "default" }}>👤</span>
 
-        {/* Profile */}
-        <div style={{ position: "relative" }}>
-          <span style={{ cursor: "pointer" }} onClick={handleProfileClick}>
-            👤
-          </span>
-          {showProfileMenu && (
-            <div
-              style={{
-                position: "absolute",
-                top: "2rem",
-                right: 0,
-                background: "#fff",
-                border: "1px solid #ddd",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                borderRadius: "4px",
-                padding: "0.5rem",
-              }}
-            >
-              <p
-                style={{ margin: 0, padding: "0.5rem", cursor: "pointer" }}
-                onClick={() => router.push("/profile")}
-              >
-                My Profile
-              </p>
+        // {/* Profile */}
+        // <div style={{ position: "relative" }}>
+        //   <span style={{ cursor: "pointer" }} onClick={handleProfileClick}>
+        //     👤
+        //   </span>
+        //   {showProfileMenu && (
+        //     <div
+        //       style={{
+        //         position: "absolute",
+        //         top: "2rem",
+        //         right: 0,
+        //         background: "#fff",
+        //         border: "1px solid #ddd",
+        //         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+        //         borderRadius: "4px",
+        //         padding: "0.5rem",
+        //       }}
+        //     >
+        //       <p
+        //         style={{ margin: 0, padding: "0.5rem", cursor: "pointer" }}
+        //         onClick={() => router.push("/profile")}
+        //       >
+        //         My Profile
+        //       </p>
               <p
                 style={{ margin: 0, padding: "0.5rem", cursor: "pointer" }}
                 onClick={() => alert("Logged out")}
