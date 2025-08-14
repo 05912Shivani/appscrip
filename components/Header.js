@@ -7,18 +7,6 @@ export default function Header() {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const router = useRouter();
 
-  const handleSearchClick = () => {
-    router.push("/search");
-  };
-
-  const handleWishlistClick = () => {
-    router.push("/wishlist");
-  };
-
-  const handleCartClick = () => {
-    router.push("/cart");
-  };
-
   const handleProfileClick = () => {
     setShowProfileMenu((prev) => !prev);
   };
@@ -77,15 +65,10 @@ export default function Header() {
           position: "relative",
         }}
       >
-        <span style={{ cursor: "pointer" }} onClick={handleSearchClick}>
-          🔍
-        </span>
-        <span style={{ cursor: "pointer" }} onClick={handleWishlistClick}>
-          ❤️
-        </span>
-        <span style={{ cursor: "pointer" }} onClick={handleCartClick}>
-          🛍️
-        </span>
+        {/* Just icons, no redirect */}
+        <span style={{ cursor: "default" }}>🔍</span>
+        <span style={{ cursor: "default" }}>❤️</span>
+        <span style={{ cursor: "default" }}>🛍️</span>
 
         {/* Profile */}
         <div style={{ position: "relative" }}>
