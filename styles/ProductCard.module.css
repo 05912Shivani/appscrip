@@ -1,0 +1,14 @@
+.card {
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #fff;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  min-height:250px;
+}
+.image { height:160px; object-fit:contain; }
+.info { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; }
+.title { font-size:0.9rem; font-weight:600; margin:0; }
+.price { font-weight:700; color:#111; }

@@ -1,0 +1,74 @@
+.filterSidebar {
+  border-right: 1px solid #eee;
+  padding: 1rem;
+}
+.itemCount {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.filterCheckbox {
+  margin-bottom: 1rem;
+}
+.filterSection {
+  border-top: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 500;
+}
+.filterContent {
+  padding: 0.5rem 0;
+  color: #666;
+}
+.filterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.itemCount {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.hideFilterBtn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  color: #555;
+}
+
+.hideFilterBtn:hover {
+  color: #000;
+}
+
+.filterList {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.filterList li {
+  margin-bottom: 0.25rem;
+}
+
+.filterText {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+
+.filterList input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+

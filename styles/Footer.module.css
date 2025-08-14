@@ -1,0 +1,103 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 80px 20px;
+}
+
+.newsletter {
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.newsletter p {
+  font-size: 0.9rem;
+  margin: 8px 0 16px;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.subscribe input {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  width: 250px;
+}
+
+.subscribe button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footerMain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.footerCol h4 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footerCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerCol ul li {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.footerCol ul li:hover {
+  text-decoration: underline;
+}
+
+.contactInfo p {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.smallText {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.paymentIcons img {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
