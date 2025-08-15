@@ -1,83 +1,12 @@
-// import { useState } from 'react';
-// import styles from '../styles/Sidebar.module.css';
-
-// export default function Sidebar() {
-//   const filters = [
-//     'IDEAL FOR',
-//     'OCCASION',
-//     'WORK',
-//     'FABRIC',
-//     'SEGMENT',
-//     'SUITABLE FOR',
-//     'RAW MATERIALS',
-//     'PATTERN',
-//   ];
-
-//   const [expanded, setExpanded] = useState({});
-
-//   const toggleSection = (section) => {
-//     setExpanded((prev) => ({
-//       ...prev,
-//       [section]: !prev[section],
-//     }));
-//   };
-
-//   const idealForOptions = ['Men', 'Women', 'Baby & Kids'];
-
-//   return (
-//     <aside className={styles.filterSidebar}>
-//       <div className={styles.itemCount}>3425 ITEMS</div>
-
-//       <div className={styles.filterCheckbox}>
-//         <input type="checkbox" id="customizable" />
-//         <label htmlFor="customizable">Customizable</label>
-//       </div>
-
-//       {filters.map((section) => (
-//         <div key={section} className={styles.filterSection}>
-//           <div
-//             className={styles.filterHeader}
-//             onClick={() => toggleSection(section)}
-//           >
-//             <span>{section}</span>
-//             <span>{expanded[section] ? '▲' : '▼'}</span>
-//           </div>
-
-//           {expanded[section] && (
-//             <div className={styles.filterContent}>
-//               {section === 'IDEAL FOR' ? (
-//                 <ul className={styles.filterList}>
-//                   <li className={styles.filterText}>All</li>
-//                   <li className={styles.filterText}>Unselect all</li>
-//                   {idealForOptions.map((opt) => (
-//                     <li key={opt}>
-//                       <label>
-//                         <input type="checkbox" />
-//                         {opt}
-//                       </label>
-//                     </li>
-//                   ))}
-//                 </ul>
-//               ) : (
-//                 'All'
-//               )}
-//             </div>
-//           )}
-//         </div>
-//       ))}
-//     </aside>
-//   );
-// }
-
-
 import { useState } from "react";
 import styles from "../styles/Sidebar.module.css";
 
 export default function Sidebar({
-  products,
-  selectedCategories,
-  setSelectedCategories,
+  products,   // All products fetched from API
+  selectedCategories,   // Array of currently selected categories
+  setSelectedCategories,   // Function to update selected categories
 }) {
+  // Filter section headings
   const filters = [
     "IDEAL FOR",
     "OCCASION",
@@ -88,35 +17,36 @@ export default function Sidebar({
     "RAW MATERIALS",
     "PATTERN",
   ];
-
+// Map display names to actual category values from API
   const categoryMap = {
     Men: "men's clothing",
     Women: "women's clothing",
-    "Baby & Kids": "baby-kids", // No products in API
+    "Baby & Kids": "baby-kids", 
   };
-
+// Options shown under "IDEAL FOR"
   const idealForOptions = ["Men", "Women", "Baby & Kids"];
-  const [expanded, setExpanded] = useState({ "IDEAL FOR": true });
+  const [expanded, setExpanded] = useState({ "IDEAL FOR": true });  // State to store which filter sections are expanded (default: IDEAL FOR is open)
 
+  // Toggle expand/collapse for a section
   const toggleSection = (section) => {
     setExpanded((prev) => ({
-      [section]: !prev[section], // Only one section open
+      [section]: !prev[section],  // Toggle only the clicked section
     }));
   };
-
+// Handle checkbox click for a category
   const handleCheckboxChange = (category) => {
-    const mappedCategory = categoryMap[category];
+    const mappedCategory = categoryMap[category];  // Map to API category
     setSelectedCategories((prev) =>
       prev.includes(mappedCategory)
-        ? prev.filter((c) => c !== mappedCategory)
-        : [...prev, mappedCategory]
+        ? prev.filter((c) => c !== mappedCategory)  // Remove category if already selected
+        : [...prev, mappedCategory]    // Add category if not selected
     );
   };
-
+// Count how many products match selected categories
   const itemCount = products.filter((p) =>
     selectedCategories.length > 0
-      ? selectedCategories.includes(p.category)
-      : true
+      ? selectedCategories.includes(p.category)  // Filter only if categories are selected
+      : true    // Otherwise show all
   ).length;
 
   return (
