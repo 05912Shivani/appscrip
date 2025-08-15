@@ -3,11 +3,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Header() {
+  // State to toggle the language menu dropdown
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  // State to toggle the profile menu dropdown
   const [showProfileMenu, setShowProfileMenu] = useState(false);
-  const router = useRouter();
+  const router = useRouter();// Next.js router for navigation
 
-  const handleProfileClick = () => {
+  const handleProfileClick = () => {    // Toggle profile menu visibility
     setShowProfileMenu((prev) => !prev);
   };
 
@@ -56,7 +58,7 @@ export default function Header() {
         <Link href="/contact">Contact Us</Link>
       </nav>
 
-      {/* Icons + Language */}
+      {/* Icons  */}
       <div
         style={{
           display: "flex",
