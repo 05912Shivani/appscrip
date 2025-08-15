@@ -2,17 +2,20 @@ import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.newsletter}>
-        <h4>BE THE FIRST TO KNOW</h4>
-        <p>Sign up for updates from mettā muse.</p>
+    <footer className={styles.footer}>    {/* Main footer container */}
+     {/* ======= Newsletter Signup Section ======= */}
+      <div className={styles.newsletter}>  
+        <h4>BE THE FIRST TO KNOW</h4>   
+        <p>Sign up for updates from mettā muse.</p>     
         <div className={styles.subscribe}>
           <input type="email" placeholder="Enter your e-mail..." />
           <button>SUBSCRIBE</button>
         </div>
       </div>
-
+{/* ======= Footer Main Content ======= */}
       <div className={styles.footerMain}>
+
+        {/* Column 1: About Section */}
         <div className={styles.footerCol}>
           <h4>mettā muse</h4>
           <ul>
@@ -24,7 +27,7 @@ export default function Footer() {
             <li>EU Compliances Docs</li>
           </ul>
         </div>
-
+ {/* Column 2: Quick Links */}
         <div className={styles.footerCol}>
           <h4>QUICK LINKS</h4>
           <ul>
@@ -37,7 +40,7 @@ export default function Footer() {
             <li>Terms & Conditions</li>
           </ul>
         </div>
-
+{/* Column 3: Contact Information */}
         <div className={`${styles.footerCol} ${styles.contactInfo}`}>
           <h4>CONTACT US</h4>
           <p>+44 221 133 5360</p>
@@ -49,7 +52,7 @@ export default function Footer() {
             Transactions will be completed in Euros and a currency reference is available on hover.
           </p>
         </div>
-
+{/* Column 4: Social Media & Payment Icons */}
         <div className={`${styles.footerCol} ${styles.socialPayment}`}>
           <h4>FOLLOW US</h4>
           <div className={styles.socialIcons}>
@@ -67,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
+{/* ======= Footer Bottom Section ======= */}
       <div className={styles.footerBottom}>
         <p>Copyright © 2023 mettamuse. All rights reserved.</p>
       </div>
