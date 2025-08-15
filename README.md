@@ -1,4 +1,4 @@
-# Appscrip Task – Shikha Sharma
+# Appscrip Task 
 
 This is **Appscrip PLP Task** based on the given [Figma Design](https://www.figma.com/file/N0Tv7yYLf3kfMLQjUncUlx/Design-Task---PLP?type=design).  
 The project is built using **Next.js** with **Server-Side Rendering (SSR)** and a mock API (`https://fakestoreapi.com/`).  
