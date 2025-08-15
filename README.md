@@ -29,7 +29,7 @@ It includes responsive UI, filter functionality, sorting, SEO optimizations, and
   - JSON-LD Schema Markup in `<head>`.
 - **Minimal dependencies** — mostly native Next.js/React.
 - **Mock API** integration (`https://fakestoreapi.com/`).
-- **Hosted publicly** on Netlify/Vercel.
+- **Hosted publicly** on Netlify.
 
 ---
 
